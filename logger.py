@@ -53,3 +53,38 @@ import logging
 ###
 #print("\nnew\n")
 ###
+# import logging
+# logging.basicConfig(
+#     format="{asctime} - {levelname} - {message}",
+#     style="{",
+#     datefmt="%Y-%m-%d %H:%M",
+#     level=logging.DEBUG,
+# )
+# 
+# name = "Samara"
+# logging.debug(f"{name=}")
+
+###
+#print("\nnew\n")
+#custom one
+###
+
+
+import logging
+logger = logging.getLogger(__name__)
+#logger.warning("Look at my logger!")
+
+#console_handler = logging.StreamHandler()
+file_handler = logging.FileHandler("app11.log", mode="a", encoding="utf-8")
+
+#logger.addHandler(console_handler)
+logger.addHandler(file_handler)
+# print(logger.handlers)
+formatter = logging.Formatter(
+   "{asctime} - {levelname} - {message}",
+    style="{",
+    datefmt="%Y-%m-%d %H:%M",
+)
+
+file_handler.setFormatter(formatter)
+logger.warning("watch out")

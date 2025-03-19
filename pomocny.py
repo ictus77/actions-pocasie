@@ -1,5 +1,6 @@
 import requests
 import datetime
+
 import logger_custom as l
 
 
@@ -25,4 +26,4 @@ if __name__ == "__main__":
     
         l.logger.info(date_time)
         l.logger.info(f'{date_time} temp: {teplota_vzduchu} wind: {rychlost_vetru_mss}')
-        l.logger_all.info(f'{date_time}\ntemp: {teplota_vzduchu} wind: {rychlost_vetru_mss} proste bordel')
+        l.logger_all.info(f'{date_time} temp: {teplota_vzduchu} wind: {rychlost_vetru_mss} proste bordel')

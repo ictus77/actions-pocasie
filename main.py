@@ -28,5 +28,5 @@ if __name__ == "__main__":
     #l.logger_all.info(f'{date_time} all: \n{table_str}')
     #l.logger_all.info(f'{date_time} all: {table}')
     '''
-    l.logger.info(f'{date_time} temp: {tabulka['teplota_vzduchu']} wind: {tabulka['rychlost_vetru_mss']}')
+    l.logger.info(f"{date_time} temp: {tabulka['teplota_vzduchu']} wind: {tabulka['rychlost_vetru_mss']}")
     l.logger_all.info(f'{date_time} all: {tabulka}')

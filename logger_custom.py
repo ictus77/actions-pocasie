@@ -16,8 +16,8 @@ def setup_logger(name, log_file, level=logging.DEBUG):
 
     return logger
 
-logger = setup_logger('important', 'app3.log')
+logger = setup_logger('important', 'app4.log')
 #logger.info('dolezite')
 
-logger_all = setup_logger('all_values', 'all3.log')
+logger_all = setup_logger('all_values', 'all4.log')
 #logger_all.info('all')

@@ -30,3 +30,22 @@ if __name__ == "__main__":
     '''
     l.logger.info(f"{date_time} temp: {tabulka['teplota_vzduchu']} wind: {tabulka['rychlost_vetru_mss']}")
     l.logger_all.info(f'{date_time} all: {tabulka}')
+
+#remove duplicate lines , as cron on github is running just random
+### app log
+with open("./app4.log", "r") as file_app: 
+    lines_app = file_app.readlines()
+
+unique_lines_app = list(dict.fromkeys(lines_app))
+
+with open("./app4.log", "w") as file_app: 
+    file_app.writelines(unique_lines_app)
+
+### all log
+with open("./all4.log", "r") as file_all: 
+    lines_all = file_all.readlines()
+
+unique_lines_all = list(dict.fromkeys(lines_all))
+
+with open("./all4.log", "w") as file_all: 
+    file_all.writelines(unique_lines_all)
